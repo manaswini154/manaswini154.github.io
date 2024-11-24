@@ -1,104 +1,90 @@
-<!doctype html>
-<html>
-<title> assignment</title>
-<meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style> 
-  *{
-    margin:0px;
-    padding:0px;
-    box-sizing: border-box;
-  }
-  h1{
-   text-transform: capitalize;
-   text-align: center;
-   font-size: 75%;
-  }
-  section{
-    background-color: gray;
-    border: 1px solid black;
-    font-size: 25%;
-    height: 60px;
-    position:relative;
-    float: left;  
-    width:32%;
-  }
-  main {
-  padding: 1rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-  #p1{
-    background-color: hotpink;
-    width: 30px;
-    height: 10px;
-    padding: .5px;
-    border: 1px solid black;
-    font-size: 200%;
-    position: absolute;
-    top:0px;
-    right:0px;
-
-  }
-  #p3{
-    background-color: limegreen;
-    width: 20px;
-    height: 10px;
-    padding: .5px;
-    border: 1px solid black;
-    font-size: 200%;
-    position: absolute;
-    top:0px;
-    right:0px;
-  }
-  #p5{
-    background-color: greenyellow;
-    width: 20px;
-   height: 10px;
-    padding: .5px;
-    border: 1px solid black;
-    font-size: 200%;
-    position: absolute;
-    top:0px;
-    right:0px;
-  }
-  @media (min-width: 992px){
-  .c, .b, .s {
-    flex: 1 1 calc(33.333% - 1rem);
-  }
-  }
-  @media (min-width: 768px) and (max-width: 991px) {
-  .c, .b {
-    flex: 1 1 calc(50% - 1rem);
-  }
-
-  #s3 {
-    flex: 1 1 100%;
-  }
-}
-
-/* Mobile view: 767px and below */
-@media (max-width: 767px) {
-  .c, .b, .s {
-    flex: 1 1 100%;
-  }
-}
-</style>
-  
-  <link rel="stylesheet" href="style.css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food, LLC</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+        /* Custom Styles */
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            margin-bottom: 0;
+        }
+        .dropdown-menu {
+            width: 100%; /* Take full width */
+            background-color: #f8f9fa; /* Distinguishable background */
+        }
+        .menu-section {
+            height: 1000px; /* Tall section for scrolling */
+            background-color: #f4f4f4; /* Distinguishable background */
+            padding: 20px;
+        }
+        .section {
+            height: 700px; /* Optional large sections */
+            text-align: center;
+            padding: 20px;
+            background-color: #eaeaea;
+            margin: 10px 0;
+        }
+        .back-to-top {
+            display: block;
+            margin-top: 20px;
+        }
+    </style>
+</head>
 <body>
-  <h1> our menu </h1>
-  <main>
-  <section id="s1" class="c">
-    <p id="p1">Chicken</p>
-    <p id="p2"> ilove chicken</p></section>
-    <section id="s2" class="b">
-      <p id="p3"> Beef </p>
-      <p id="p4"> i love beef </p></section>
-      <section id="s3" class="s">
-        <p id="p5"> Sushi </p>
-        <p id="p6"> i love sushi </p></section>
-</main>
-</body></html>
+    <!-- Navbar -->
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-menu" aria-expanded="false">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Food, LLC</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-menu">
+                <ul class="nav navbar-nav visible-xs">
+                    <li><a href="#chicken">Chicken</a></li>
+                    <li><a href="#beef">Beef</a></li>
+                    <li><a href="#sushi">Sushi</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Heading -->
+    <div class="container text-center">
+        <h1 class="text-center">Our Menu</h1>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div id="chicken" class="col-md-4 col-sm-6 col-xs-12 section">
+                <h3>Chicken</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <a href="#top" class="back-to-top">Back to Top</a>
+            </div>
+            <div id="beef" class="col-md-4 col-sm-6 col-xs-12 section">
+                <h3>Beef</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <a href="#top" class="back-to-top">Back to Top</a>
+            </div>
+            <div id="sushi" class="col-md-4 col-sm-12 col-xs-12 section">
+                <h3>Sushi</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <a href="#top" class="back-to-top">Back to Top</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
